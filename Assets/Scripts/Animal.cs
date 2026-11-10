@@ -12,4 +12,11 @@ public virtual string GetData()
     {
         return "";
     }
+
+//if clicked on
+public virtual void DisplayText()
+    {
+        Debug.Log("This is an animal");
+
+    }
 }
