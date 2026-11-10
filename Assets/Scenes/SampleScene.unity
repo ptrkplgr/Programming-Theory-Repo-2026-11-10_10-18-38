@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 205488231}
   - component: {fileID: 205488230}
   - component: {fileID: 205488229}
+  - component: {fileID: 205488233}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -233,6 +234,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &205488233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205488228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79517fdc47f1340f9b43566406953e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animal1
 --- !u!1 &275166954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,6 +1707,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UserControl
   GameCamera: {fileID: 330585545}
+  animalName: {fileID: 1620994835}
+  animalInfo: {fileID: 510198332}
+  InfoPopup: {fileID: 1751527252}
 --- !u!4 &1518637121
 Transform:
   m_ObjectHideFlags: 0
@@ -2128,7 +2144,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751527248}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56e2dac7e304d4f1fbf4b9b7d1cbf9c3, type: 3}
   m_Name: 

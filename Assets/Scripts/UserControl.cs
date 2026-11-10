@@ -1,11 +1,17 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
+using Mono.Cecil.Cil;
 
 public class UserControl : MonoBehaviour
 {
     public Camera GameCamera;
     private InputAction leftClickAction;
     private Animal selected = null;
+
+    public TextMeshProUGUI animalName;
+    public TextMeshProUGUI animalInfo;
+    public InfoPopup InfoPopup;
 
     private void Awake()
     {
@@ -34,6 +40,7 @@ public class UserControl : MonoBehaviour
                 var animal = hit.collider.GetComponentInParent<Animal>();
                 selected = animal;
                 selected.DisplayText();
+                UpdateInfo(selected);
                 
                 
                 //check if the hit object have a IUIInfoContent to display in the UI
@@ -43,4 +50,23 @@ public class UserControl : MonoBehaviour
                 //MainUIHandler.Instance.SetNewInfoContent(uiInfo);
             }
     }
+
+    private void UpdateInfo(Animal selectedAnimal )
+    {
+        if ( selectedAnimal == null)
+        {
+            InfoPopup.gameObject.SetActive(false);
+        }
+        else
+        {
+            InfoPopup.gameObject.SetActive(true);
+            animalName.text = selectedAnimal.GetName();
+            animalInfo.text = "Favourite food is " + selectedAnimal.GetData();
+        }
+    }
+
+   /*  public void BackToMenu()
+    {
+        SceneManager.LoadScene(0);
+    } */
 }
