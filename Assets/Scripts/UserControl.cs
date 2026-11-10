@@ -7,6 +7,23 @@ public class UserControl : MonoBehaviour
     private InputAction leftClickAction;
     private Animal selected = null;
 
+    private void Awake()
+    {
+        leftClickAction = new InputAction("LeftClick", InputActionType.Button, "<Mouse>/leftButton");
+        leftClickAction.Enable();
+    }
+
+    private void Update()
+    {
+/*         Vector2 move = moveAction.ReadValue<Vector2>();
+        GameCamera.transform.position = GameCamera.transform.position + new Vector3(move.y, 0, -move.x) * PanSpeed * Time.deltaTime; */
+
+        if (leftClickAction.WasPressedThisFrame())
+        {
+            HandleSelection();
+        }
+    }
+    
     public void HandleSelection()
     {
         var ray = GameCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
@@ -16,6 +33,7 @@ public class UserControl : MonoBehaviour
                 //the collider could be children of the unit, so we make sure to check in the parent
                 var animal = hit.collider.GetComponentInParent<Animal>();
                 selected = animal;
+                selected.DisplayText();
                 
                 
                 //check if the hit object have a IUIInfoContent to display in the UI
