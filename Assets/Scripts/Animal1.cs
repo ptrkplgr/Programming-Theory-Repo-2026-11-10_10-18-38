@@ -4,17 +4,17 @@ public class Animal1 : Animal
 {
     public override string GetName()
     {
-        return "Animal1";
+        return "Horse";
     }
 
     public override string GetData()
     {
-        return "Food1";
+        return "hay";
     }
 
     public override void DisplayText()
     {
         //base.DisplayText();
-        Debug.Log("This is Animal1");
+        Debug.Log("This is Animal1, Horse");
     }
 }
