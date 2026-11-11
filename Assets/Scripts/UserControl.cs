@@ -1,9 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
-using Mono.Cecil.Cil;
-using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
+
 
 public class UserControl : MonoBehaviour
 {
@@ -52,7 +51,7 @@ public class UserControl : MonoBehaviour
             {    
                 selected = null;
             }
-            
+            // ABSTRACTION
             UpdateInfo(selected);   
                 
                 

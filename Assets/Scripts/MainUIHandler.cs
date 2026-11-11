@@ -17,19 +17,4 @@ public class MainUIHandler : MonoBehaviour
     {
         
     }
-
-/*     public void SetNewInfoContent(IUIInfoContent content)
-    {
-        if (content == null)
-        {
-            InfoPopup.gameObject.SetActive(false);
-        }
-        else
-        {
-            InfoPopup.gameObject.SetActive(true);
-            m_CurrentContent = content;
-            InfoPopup.animalName.text = content.GetName();
-            InfoPopup.animalInfo.text = content.GetData();
-        }
-    } */
 }

@@ -1,7 +1,9 @@
 using UnityEngine;
 
+// INHERITANCE
 public class Animal2 : Animal
 {
+    //POLYMORPHISM
     public override string GetName()
     {
         return "Rooster";

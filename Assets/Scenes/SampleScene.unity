@@ -2511,12 +2511,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698022127}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03b92adec05ae456d8a08e2fd05bde9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainUIHandler
-  InfoPopup: {fileID: 1751527252}
+  InfoPopup: {fileID: 0}
 --- !u!1 &1698089827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2681,13 +2681,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751527248}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56e2dac7e304d4f1fbf4b9b7d1cbf9c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfoPopup
-  animalName: {fileID: 1620994835}
-  animalInfo: {fileID: 510198332}
+  animalName: {fileID: 0}
+  animalInfo: {fileID: 0}
 --- !u!1 &1793001440
 GameObject:
   m_ObjectHideFlags: 0
