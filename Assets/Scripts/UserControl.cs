@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using Mono.Cecil.Cil;
+using Unity.VisualScripting;
 
 public class UserControl : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class UserControl : MonoBehaviour
     {
         leftClickAction = new InputAction("LeftClick", InputActionType.Button, "<Mouse>/leftButton");
         leftClickAction.Enable();
+    }
+
+    private void Start()
+    {
+        InfoPopup.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -40,7 +46,14 @@ public class UserControl : MonoBehaviour
                 var animal = hit.collider.GetComponentInParent<Animal>();
                 selected = animal;
                 selected.DisplayText();
-                UpdateInfo(selected);
+            }
+            else
+            {    
+                selected = null;
+            }
+            
+            UpdateInfo(selected);   
+                
                 
                 
                 //check if the hit object have a IUIInfoContent to display in the UI
@@ -48,12 +61,12 @@ public class UserControl : MonoBehaviour
                 
                 //var uiInfo = hit.collider.GetComponentInParent<MainUIHandler.IUIInfoContent>();
                 //MainUIHandler.Instance.SetNewInfoContent(uiInfo);
-            }
+            
     }
 
     private void UpdateInfo(Animal selectedAnimal )
     {
-        if ( selectedAnimal == null)
+        if (selectedAnimal == null)
         {
             InfoPopup.gameObject.SetActive(false);
         }

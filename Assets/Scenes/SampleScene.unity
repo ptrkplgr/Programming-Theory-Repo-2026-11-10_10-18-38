@@ -476,6 +476,7 @@ GameObject:
   - component: {fileID: 276821675}
   - component: {fileID: 276821674}
   - component: {fileID: 276821673}
+  - component: {fileID: 276821677}
   m_Layer: 0
   m_Name: Rooster
   m_TagString: Untagged
@@ -577,6 +578,18 @@ Transform:
   - {fileID: 379172492}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 55.583, z: 0}
+--- !u!114 &276821677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276821672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 578801c404718489cb929586cffdef07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animal2
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2408,6 +2421,7 @@ GameObject:
   - component: {fileID: 1793001443}
   - component: {fileID: 1793001442}
   - component: {fileID: 1793001441}
+  - component: {fileID: 1793001445}
   m_Layer: 0
   m_Name: Cow
   m_TagString: Untagged
@@ -2509,6 +2523,18 @@ Transform:
   - {fileID: 1815632669}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 52.725, z: 0}
+--- !u!114 &1793001445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793001440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71561e72c41304f9ea9a77ee6490e25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animal3
 --- !u!1001 &1815632668
 PrefabInstance:
   m_ObjectHideFlags: 0
